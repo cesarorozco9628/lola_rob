@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+    <title>BULDING-TESTING</title>
+</head>
+<body>
+    <head>
+        <div class="d-flex justify-content-between p-2" style="background-color:#d2677b; font-size:20px; color:#FFFFFF;">
+            <span>LOGO</span>
+            <span>MENU</span>
+        </div>
+    </head>
+    <div class="container">
+        <!-- TITULO PRINCIPAL -->
+        <div class="my-5 d-flex justify-content-center">
+            <h1 class="" style="">Pagina de ejemplo de implementación de iframe-morgana</h1>
+        </div>
+        <!-- CUERPO DE OFERTA -->
+        <div class="d-flex justify-content-center" >
+            <div style="border:1px solid #D8D8D8;" class="d-flex p-2">
+                <img src="./img/house_test.png" width="600">
+                <div class="ps-4">
+                    <h4>Inmueble en venta</h4>
+                    <div class="my-2">
+                        <p style="font-weight: 700;">Precio:</p>
+                        <p>$ 6,000,000 MXN</p>
+                    </div>
+                    <div class="my-2">
+                        <p style="font-weight: 700;">Ubicación:</p>
+                        <p>CDMX</p>
+                    </div>
+                    <div class="my-2">
+                        <p style="font-weight: 700;">Tipo de inmueble:</p>
+                        <p>Casa</p>
+                    </div>
+                    <div class="my-2">
+                        <p style="font-weight: 700;">Contacto:</p>
+                        <p>55 6793 8580</p>
+                    </div>
+                    <div class="my-2">
+                        <p style="font-weight: 700;">Cotiza morgana:</p>
+                        <button class="btn-ctz-mgn d-flex justify-content-center align-items-center" id="id_btn_mgn" onclick="put_params_bulding({username:'', id:'id_fiv_frm_mgn',price:'6,000,000,', ubication:'CDMX', email:'roberto+aguacate@morgana.mx', phone:'5509230923', name:'Robert'})">
+                            <img src="./img/logo_morgana.svg" width="100">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- DESCRIPCION DEL INMUEBLE -->
+        <div class="my-5">
+            <h3>Descripción del inmueble</h3>
+            <div>
+                <p>¡Bienvenidos a esta hermosa propiedad en la Ciudad de México! Esta casa de dos pisos es el hogar perfecto para aquellos que buscan un lugar cómodo y accesible para vivir. Con tres amplias habitaciones, dos baños completos, un jardín delantero y trasero, y una plaza de estacionamiento, esta propiedad tiene todo lo que necesitas para disfrutar de la vida en la ciudad. Además, su ubicación privilegiada en una unidad residencial la convierte en una excelente inversión. ¡Contáctanos hoy mismo para programar una visita y hacer de este hermoso inmueble tu nuevo hogar!</p>
+            </div>
+        </div>
+        <div class="container-iframe-mgn" id="id_fiv_frm_mgn" style="display:none"></div>   
+    </div>
+    <script type"module" src="./js/main.js" ></script>
+</body>
+</html>
