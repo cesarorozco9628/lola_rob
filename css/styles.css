@@ -1,162 +1,3 @@
-a,
-a:hover,
-a:focus,
-a:active button,
-button:focus,
-button[type="button"],
-button.dropdown-toggle,
-button.side-menu-btn,
-input:focus,
-input.mgn-radio,
-input.mgn-checkbox,
-input.mgn-input-text,
-input[type="range"],
-input[type="range"]:focus,
-input[type="range"]::-webkit-slider-thumb,
-select.mgn-select,
-select:focus,
-textarea:focus {
-  text-decoration: none;
-  outline: none !important;
-  border: none;
-  color: inherit;
-  background-color: transparent;
-  -webkit-box-shadow: none !important;
-  box-shadow: none !important;
-  -webkit-appearance: none !important;
-  appearance: none !important;
-}
-
-.w-100{
-    width:104%!important
-}
-
-.container{
-    width: 80%;
-    margin: auto;
-}
-
-.btn-ctz-mgn{
-    border: none;
-    background: #16335b;
-    padding: 0.4rem;
-    border-radius: 0.2rem;
-}
-
-.bg-orange {
-    background: #E35410 !important;
-  }
-
-.btn-morgana ,.btn-morgana:active{
-    padding: 0.5rem 1rem;;
-    background-color: #E35410;
-    color: white;
-    border-radius: 2rem;
-    border: none;
-    text-align: center;
-    cursor: pointer;
-}
-
-.btn-morgana.disabled{
-    background-color: #777675;
-    cursor: not-allowed;
-}
-
-.modal-test{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: #00000069;
-    z-index: 12;
-    overflow: hidden;
-}
-
-.text-white{
-    color: #fff;
-}
-
-.text-blue{
-    color: #16335b !important;
-}
-
-.text-black-50{
-    color: #00000087;
-}
-
-.fs-16{
-    font-size: 16px !important;
-}
-
-input.mgn-input-text,
-select.mgn-select {
-  border: 1px solid #a4a4a4;
-  border-radius: 100px;
-  padding: 6px 12px;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 18px;
-  background-color: #f5f5f5;
-}
-
-input.mgn-input-text::placeholder,
-select.mgn-select:not(.touched) {
-  color: #a4a4a4;
-}
-
-input.mgn-input-text:focus,
-input.mgn-input-text:focus-visible,
-input.mgn-input-text:not(:placeholder-shown),
-select.mgn-select:focus,
-select.mgn-select.touched {
-  background-color: #fff;
-  color: #555555;
-  border: 1px solid #808080 !important;
-  outline: none;
-}
-select.mgn-select {
-    background-image: url("data:image/svg+xml,%3Csvg width='15' height='24' viewBox='0 0 15 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.61077 11.8772C3.37685 11.655 3.25989 11.3918 3.25989 11.0877C3.27159 10.7836 3.37685 10.5263 3.57568 10.3158C3.78621 10.1053 4.05521 10 4.3827 10H9.89147C10.219 10 10.488 10.1053 10.6985 10.3158C10.909 10.5263 11.0143 10.7836 11.0143 11.0877C11.0143 11.3918 10.8973 11.655 10.6634 11.8772L7.9441 14.5965C7.73358 14.807 7.46457 14.9123 7.13708 14.9123C6.8213 14.9123 6.55229 14.807 6.33007 14.5965L3.61077 11.8772Z' fill='%23E35410'/%3E%3C/svg%3E%0A");
-    background-repeat: no-repeat !important;
-    background-position-x: calc(100% - 12px) !important;
-    background-position-y: 50% !important;
-  }
-
-input[type="range"],
-input[type="range"]:focus {
-  height: 4px;
-  border-radius: 5px;
-  background: #d8d8d8;
-  outline: none;
-  transition: opacity 0.2s;
-}
-
-input[type="range"]::-webkit-slider-thumb {
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background: #e35410;
-  cursor: pointer;
-  outline: none;
-}
-label.enganche-label {
-    position: absolute;
-    right: 1px;
-    top: 1px;
-    background: #d8d8d8;
-    border: 1px solid #d8d8d8;
-    border-radius: 100px;
-    font-weight: 400;
-    font-size: 10px;
-    line-height: 16px;
-    color: #5a5a5a;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
 .container-iframe-mgn{
     position: fixed;
     top: 0;
@@ -171,49 +12,16 @@ label.enganche-label {
     flex-direction: column;
 }
 
-.cursor-pointer{
-    cursor: pointer;
-}
-
 .iframe-width {
     width: 60vw;
     height: 80vh;
 }
 
-
-
 .div-width{
     width: 60vw;
 }
-input.mgn-radio {
-    border-radius: 50%;
-  }
-  
-  input.mgn-radio,
-  input.mgn-checkbox {
-    height: 16px;
-    width: 16px;
-    border: 2px solid #a4a4a4;
-    margin: 0 8px 0 0;
-    background-color: #fff;
-    position: relative;
-  }
-  
-  input.mgn-radio:checked::before {
-    content: "";
-    position: absolute;
-    background: #e35410;
-    height: 10px;
-    width: 10px;
-    border-radius: 50%;
-    top: 1px;
-    left: 1px;
-  }
 
-
-  /* responsive */
-
-  .div-responsive{
+.div-responsive{
     width: 90vw;
 }
 
@@ -222,7 +30,4 @@ input.mgn-radio {
   height: 90vh !important;
 }
 
-.w-90{
-  width: 90vw;
-}
 
