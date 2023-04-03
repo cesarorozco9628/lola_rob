@@ -5,6 +5,15 @@ function hash_text(text){
      return myPassword(text)
 }
 
+const close_modal_mgn = (id) => {
+    const modal_mgn = document.getElementById(id);  
+    modal_mgn.style.display = 'none';
+}
+
+const open_modal_mgn = (id) => {
+    const modal_mgn = document.getElementById(id);
+    modal_mgn.style.display = 'flex'
+}
 
 const cipher = salt => {
     const textToChars = text => text.split('').map(c => c.charCodeAt(0));
@@ -18,15 +27,6 @@ const cipher = salt => {
       .join('');
 }
     
-const decipher = salt => {
-    const textToChars = text => text.split('').map(c => c.charCodeAt(0));
-    const applySaltToChar = code => textToChars(salt).reduce((a,b) => a ^ b, code);
-    return encoded => encoded.match(/.{1,2}/g)
-      .map(hex => parseInt(hex, 16))
-      .map(applySaltToChar)
-      .map(charCode => String.fromCharCode(charCode))
-      .join('');
-}
 
 const put_params_bulding = (data) => {
     let { username ,id, price, ubication, email, name, phone } = data;
@@ -51,4 +51,8 @@ const put_params_bulding = (data) => {
     </div>
     <iframe class="${width_iframe}" src="https://uat.morgana.mx/lola/registra_cotiza/${params.length>0 ? `?${params}`:''}" id="id_ifm_mgn" width=""></iframe>
     `
+    open_modal_mgn(id);handle_modal_width(id);
 }
+
+
+
