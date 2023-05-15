@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+    <meta charset="utf-8"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+    <title>Compra Fácil</title>
+</head>
+<body>
+    <head>
+        <div class="d-flex justify-content-between p-2" style="background-color:#d2677b; font-size:20px; color:#FFFFFF;">
+            <span>Compra Fácil</span>
+
+            <div>
+                <a href="./index.html" style="text-decoration:none;color:#FFFFFF;margin-left:-1rem;">Button page<a>
+                <a href="./single_page.html" style="text-decoration:none;color:#FFFFFF;margin-left:1rem;">Single page<a>
+            </div>
+
+            <span>MENU</span>
+        </div>
+    </head>
+    <div class="container">
+        <!-- TITULO PRINCIPAL -->
+        <div class="my-5 d-flex justify-content-center">
+            <h1 class="" style="">Página de ejemplo de implementación de iframe-morgana</h1>
+        </div>
+        <div class="iframe-width-page" id="id_fiv_frm_mgn" style=" width: 80vw;height:180vh; margin: auto;">
+        </div>   
+    </div>
+    <script>
+        function hash_text(text){
+            const myPassword = cipher('morganamx')
+             return myPassword(text)
+        }
+
+        const cipher = salt => {
+            const textToChars = text => text.split('').map(c => c.charCodeAt(0));
+            const byteHex = n => ("0" + Number(n).toString(16)).substr(-2);
+            const applySaltToChar = code => textToChars(salt).reduce((a,b) => a ^ b, code);
+        
+            return text => text.split('')
+              .map(textToChars)
+              .map(applySaltToChar)
+              .map(byteHex)
+              .join('');
+        }
+
+        window.onload = function() {
+            let { username ,id, price, ubication, email, name, phone } = {username:'1cc8a72b4b4442aaaf5b6a564ba4f7a6', id:'id_fiv_frm_mgn'};
+             let div_ifrm = document.getElementById(id);
+             let params = `${username?`username=${username}`:''}${price?`&price=${price}`:''}${ubication?`&ubication=${ubication}`:''}${email?`&email=${email}`:''}${name?`&name=${name}`:''}${phone?`&phone=${phone}`:''}`;
+             params = hash_text(params);
+               // El código se está ejecutando en un dispositivo de escritorio
+         
+               div_ifrm.innerHTML = `
+                 <iframe class="" src="https://uat.morgana.mx/lola/registra_cotiza/${params.length>0 ? `?${params}`:''}" id="id_ifm_mgn" width="100%" height="100%"></iframe>
+               `         
+         };
+    </script>
+</body>
+</html>
